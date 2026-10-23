@@ -1,0 +1,11 @@
+
+title = "Custom secret detection test"
+
+[extend]
+useDefault = true
+
+[[rules]]
+id = "aws-secret-variable-test"
+description = "Detect AWS secret access key assignments"
+regex = '''(?i)AWS_SECRET_ACCESS_KEY\s*=\s*["'][^"']{8,}["']'''
+keywords = ["AWS_SECRET_ACCESS_KEY"]
